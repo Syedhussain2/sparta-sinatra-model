@@ -1,0 +1,10 @@
+<h1>PEOPLE</h1>
+<% @people.each do |people| %>
+  <h1><%= people.id %></h1>
+  <h1><%= people.first_name %></h1>
+  <h1><%= people.last_name %></h1>
+  <a href="/people/<%= people.id%>">Gender</a>
+  <%#people.gender.each do |gender| %>
+    <h5><%= people.gender  %></h5>
+  <%# end %>
+<% end %>

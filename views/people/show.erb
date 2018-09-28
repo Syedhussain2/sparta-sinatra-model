@@ -1,0 +1,11 @@
+<h1>First Name <%= @people.first_name  %></h1>
+<h3>Last Name <%= @people.last_name%></h3>
+<h3>Gender <%= @people.gender%></h3>
+
+<a href="/people">back</a>
+<a href="/people/<%= @people.id%>/edit">Edit</a>
+
+<form class="" action="/people/<%= @people.id %>" method="post">
+  <input type="hidden" name="_method" value="Delete">
+  <input type="submit"  value="Delete">
+</form>

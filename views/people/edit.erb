@@ -1,0 +1,18 @@
+<form action="/people/<%= @people.id %>" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">First Name</label>
+    <input type="text" class="form-control" placeholder="First Name" name="first_name" value = "<%= @people.first_name %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Last Name</label>
+    <input type="text" class="form-control" placeholder="last_name"name="last_name"value = "<%= @people.last_name %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Gender</label>
+    <input type="text"class="form-control" placeholder="Gender"name="gender" value = "<%= @people.gender %>">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <% if (@people.id != '')  %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end  %>
+</form>
