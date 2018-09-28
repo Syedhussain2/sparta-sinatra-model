@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS people;
 
 create table people (
+	id SERIAL PRIMARY KEY,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
 	gender VARCHAR(50)
