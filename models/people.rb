@@ -20,9 +20,9 @@ end
 def save
   conn =  People.open_connection
   if !self.id
-    sql = "INSERT INTO people (first_name,last_name,gender) VALUES ('#{self.first_name}', #{self.last_name}, '#{self.gender}')"
+    sql = "INSERT INTO people (first_name,last_name,gender) VALUES ('#{self.first_name}', '#{self.last_name}', '#{self.gender}')"
   else
-    sql = "UPDATE people SET first_name='#{self.first_name}',last_name=#{self.last_name},gender='#{self.gender}' WHERE id='#{self.id}' "
+    sql = "UPDATE people SET first_name='#{self.first_name}',last_name='#{self.last_name}',gender='#{self.gender}' WHERE id=#{self.id} "
   end
 
   conn.exec(sql)

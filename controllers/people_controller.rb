@@ -28,7 +28,7 @@ class App < Sinatra::Base
   post '/people' do
     people = People.new
     people.first_name = params[:first_name]
-    people.last_name = param[:last_name]
+    people.last_name = params[:last_name]
     people.gender = params[:gender]
     people.save
     redirect '/people'
@@ -54,7 +54,7 @@ class App < Sinatra::Base
   end
   #EDIT
   get '/people/:id/edit' do
-    id = params[:id].to_i 
+    id = params[:id].to_i
     @people = People.find id
 
     erb :'people/edit'
